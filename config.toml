@@ -1,13 +1,13 @@
-title = "NYC Mesh"
-baseURL = "https://www.nycmesh.net/"
+title = "Org99"
+baseURL = "https://org99.org/"
 defaultContentLanguage = "en"
 pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
 summaryLength = 10
 
 [params]
-  title = "NYC Mesh"
-  description = "Join our community-owned network to replace your current internet connection."
+  title = "Org99"
+  description = "AI Portal"
   images = ["/img/3d.png"]
 
 [languages]
