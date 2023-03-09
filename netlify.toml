@@ -1,0 +1,13 @@
+[build]
+publish = "public"
+command = "sh update-map.sh && sh update-stats.sh && hugo"
+
+[context.production.environment]
+HUGO_VERSION = "0.69.0"
+HUGO_ENV = "production"
+
+[context.deploy-preview.environment]
+HUGO_VERSION = "0.69.0"
+
+[context.branch-deploy.environment]
+HUGO_VERSION = "0.69.0"

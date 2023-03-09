@@ -1,0 +1,51 @@
+<section id="updates" class="bg-near-white pt4-ns pt3 ph4-ns ph3">
+    <div class="measure-wide-m mw8-l center bb b--moon-gray pb5">
+      <div class="flex flex-row-l flex-wrap mhn4">
+      <!-- Blog -->
+      <div class="w-30-l w-50-m ph4 overflow-auto mb0-l mb4">
+          <div class="flex items-center justify-between">
+              <h2 class="dark-gray fw6 f4">
+              Blog
+            </h2>
+            <a href="/blog">See all</a>
+          </div>
+        <ul class="list pa0 ma0">
+          {{ range first 4 (where .Site.RegularPages "Section" "blog") }}
+            <li class=" mb3 mb-last-0">
+              <time class="gray lh-title db mb1 f6">
+                {{ .Date.Format "January 2, 2006" }}
+              </time>
+              <a href="{{ .RelPermalink }}" class="fw5 no-underline lh-title dark-gray">
+                  {{ .Title }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <!-- Press -->
+       <div class="w-30-l w-50-m ph4 overflow-auto mb0-l mb4">
+        <div class="flex items-center justify-between">
+          <h2 class="dark-gray fw6 f4">
+            Press
+          </h2>
+          <a href="/press">See all</a>
+        </div>
+        <ul class="list pa0 ma0">
+          {{ range first 3 (where .Site.RegularPages "Section" "press") }}
+            <li class="mb3 mb-last-0">
+              <span class="gray lh-title db mb1 f6">
+                {{ .Params.Publication }}
+              </span>
+              <a href="{{ .Params.Link }}" class="fw5 no-underline lh-title dark-gray">
+                {{ .Title }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+
+      
+    </div>
+  </div>
+</section>
